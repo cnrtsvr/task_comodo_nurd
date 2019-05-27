@@ -1,0 +1,7 @@
+<div class="w3-table w3-striped w3-bordered w3-border w3-card">
+	<ng2-smart-table 
+	    [settings]="settings" 
+	    [source]="users"
+		(create)="onAddUser($event)" >
+	</ng2-smart-table>
+</div>
