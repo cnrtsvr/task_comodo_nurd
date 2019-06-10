@@ -8,6 +8,7 @@
     "deploy": "ng b --prod --base-href https://cnrtsvr.github.io/task_comodo_nurd/ && npx ngh --dir=dist/my-users",
     "test": "ng test",
     "lint": "ng lint",
+    "lint-fix": "ng lint my-users --fix=true --force=true",
     "e2e": "ng e2e"
   },
   "private": true,

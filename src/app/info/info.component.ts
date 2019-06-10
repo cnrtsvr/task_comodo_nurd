@@ -1,21 +1,23 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import {Component, OnInit, HostBinding} from '@angular/core';
 
 @Component({
-  selector: 'app-info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./info.component.css']
+    selector: 'app-info',
+    templateUrl: './info.component.html',
+    styleUrls: ['./info.component.css']
 })
 export class InfoComponent implements OnInit {
 
-	@HostBinding('class.infoText')
-	infoText = '';
-  constructor() { }
+    @HostBinding('class.infoText')
+    infoText = '';
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
 
-  changeText(text){
-  	this.infoText = text;
-  }
+    ngOnInit() {
+    }
+
+    changeText(text) {
+        this.infoText = text;
+    }
 
 }

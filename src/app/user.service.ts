@@ -1,20 +1,21 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { User } from './User';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {User} from './User';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserService {
 
-	constructor(private http: HttpClient, private userService: UserService) { }
-  
-	usersDataUrl = 'assets/users.json';
-	users: User[];
+    constructor(private http: HttpClient, private userService: UserService) {
+    }
 
-	getUsers() {
-    	return this.http
+    usersDataUrl = 'assets/users.json';
+    users: User[];
+
+    getUsers() {
+        return this.http
             .get(this.usersDataUrl)
             .toPromise();
-	}
+    }
 }
